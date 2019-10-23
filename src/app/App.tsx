@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 const App: React.FC = () => {
+  let counter1 = 0;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,6 +14,7 @@ const App: React.FC = () => {
         </p>
       </header>
       <div>
+        <p>You have clicked {counter1} times.</p>
         <button>Click Me!</button>
       </div>
     </div>
