@@ -23,6 +23,10 @@ const App: React.FC = () => {
     localStorage.setItem('count2', String(count2))
   }, [count2]);
 
+  const resetData = () => {
+    localStorage.clear();
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -42,6 +46,9 @@ const App: React.FC = () => {
           <button onClick={() => setCount2(count2 + 1)}>Action Two</button>
         </div>
       }
+      <div className="Footer">
+        <button onClick={resetData}>reset</button>
+      </div>
     </div>
   );
 }
