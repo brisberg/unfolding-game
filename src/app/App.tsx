@@ -25,6 +25,9 @@ const App: React.FC = () => {
 
   const resetData = () => {
     localStorage.clear();
+    const appState = loadSaveData();
+    setCount1(appState[0]);
+    setCount2(appState[1]);
   }
 
   return (
@@ -35,18 +38,20 @@ const App: React.FC = () => {
           You find yourself in a dark room...
         </p>
       </header>
-      <div>
-        <p>You have performed action one {count1} times.</p>
-        <button onClick={() => setCount1(count1 + 1)}>Action One</button>
-      </div>
-      {count1 >= 5 &&
+      <div className="App-body">
         <div>
-          <p>A new event has occured!</p>
-          <p>You have performed action two {count2} times.</p>
-          <button onClick={() => setCount2(count2 + 1)}>Action Two</button>
+          <p>You have performed action one {count1} times.</p>
+          <button onClick={() => setCount1(count1 + 1)}>Action One</button>
         </div>
-      }
-      <div className="Footer">
+        {count1 >= 5 &&
+          <div>
+            <p>A new event has occured!</p>
+            <p>You have performed action two {count2} times.</p>
+            <button onClick={() => setCount2(count2 + 1)}>Action Two</button>
+          </div>
+        }
+      </div>
+      <div className="App-footer">
         <button onClick={resetData}>reset</button>
       </div>
     </div>
