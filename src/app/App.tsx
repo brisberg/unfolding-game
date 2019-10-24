@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 const App: React.FC = () => {
-  const [count1, setCount1] = useState(0);
+  const [count1, setCount1] = useState(
+    parseInt(localStorage.getItem('count1') || '0') || 0);
   const [count2, setCount2] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem('count1', "" + count1)
+  }, [count1]);
 
   return (
     <div className="App">
