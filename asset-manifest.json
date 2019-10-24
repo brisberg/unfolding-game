@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/unfolding-game/static/css/main.328efa21.chunk.css",
-    "main.js": "/unfolding-game/static/js/main.7d19e3cc.chunk.js",
-    "main.js.map": "/unfolding-game/static/js/main.7d19e3cc.chunk.js.map",
+    "main.js": "/unfolding-game/static/js/main.767d1dad.chunk.js",
+    "main.js.map": "/unfolding-game/static/js/main.767d1dad.chunk.js.map",
     "runtime-main.js": "/unfolding-game/static/js/runtime-main.d216cd8c.js",
     "runtime-main.js.map": "/unfolding-game/static/js/runtime-main.d216cd8c.js.map",
     "static/js/2.72bb7b86.chunk.js": "/unfolding-game/static/js/2.72bb7b86.chunk.js",
     "static/js/2.72bb7b86.chunk.js.map": "/unfolding-game/static/js/2.72bb7b86.chunk.js.map",
     "index.html": "/unfolding-game/index.html",
-    "precache-manifest.5ad107ac55e92ebfef8c1106a07f33f2.js": "/unfolding-game/precache-manifest.5ad107ac55e92ebfef8c1106a07f33f2.js",
+    "precache-manifest.b783d02ec2aed885abaf8aa3ba381cf8.js": "/unfolding-game/precache-manifest.b783d02ec2aed885abaf8aa3ba381cf8.js",
     "service-worker.js": "/unfolding-game/service-worker.js",
     "static/css/main.328efa21.chunk.css.map": "/unfolding-game/static/css/main.328efa21.chunk.css.map",
     "static/media/logo.svg": "/unfolding-game/static/media/logo.25bf045c.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d216cd8c.js",
     "static/js/2.72bb7b86.chunk.js",
     "static/css/main.328efa21.chunk.css",
-    "static/js/main.7d19e3cc.chunk.js"
+    "static/js/main.767d1dad.chunk.js"
   ]
 }
