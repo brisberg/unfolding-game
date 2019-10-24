@@ -2,10 +2,20 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+interface AppState {
+  count1: number;
+  count2: number;
+}
+
+const initialState: AppState = {
+  count1: 0,
+  count2: 0,
+}
+
 const loadSaveData = (): number[] => {
   return [
-    parseInt(localStorage.getItem('count1') || '') || 0,
-    parseInt(localStorage.getItem('count2') || '') || 0,
+    parseInt(localStorage.getItem('count1') || '') || initialState.count1,
+    parseInt(localStorage.getItem('count2') || '') || initialState.count2,
   ]
 }
 
