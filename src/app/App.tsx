@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+interface Action {
+  type: string;
+}
 
 interface AppState {
   count1: number;
@@ -12,32 +16,37 @@ const initialState: AppState = {
   count2: 0,
 }
 
-const loadSaveData = (): number[] => {
-  return [
-    parseInt(localStorage.getItem('count1') || '') || initialState.count1,
-    parseInt(localStorage.getItem('count2') || '') || initialState.count2,
-  ]
+function reducer(state = initialState, action: Action) {
+  switch (action.type) {
+    case 'INCREMENT_ACTION_ONE':
+      return {
+        ...state,
+        count1: state.count1 + 1,
+      }
+    case 'INCREMENT_ACTION_TWO':
+      return {
+        ...state,
+        count2: state.count2 + 1,
+      }
+    case 'RESET':
+      return { ...initialState }
+    default:
+      return state;
+  }
 }
 
 const App: React.FC = () => {
-  const initialState = loadSaveData();
+  const loadedData = localStorage.getItem('gameState');
 
-  const [count1, setCount1] = useState(initialState[0]);
-  const [count2, setCount2] = useState(initialState[1]);
-
-  useEffect(() => {
-    localStorage.setItem('count1', String(count1))
-  }, [count1]);
+  const [state, dispatch] = useReducer(reducer, loadedData ? JSON.parse(loadedData) : initialState);
 
   useEffect(() => {
-    localStorage.setItem('count2', String(count2))
-  }, [count2]);
+    localStorage.setItem('gameState', JSON.stringify(state))
+  }, [state]);
 
   const resetData = () => {
     localStorage.clear();
-    const appState = loadSaveData();
-    setCount1(appState[0]);
-    setCount2(appState[1]);
+    dispatch({ type: 'RESET' });
   }
 
   return (
@@ -50,17 +59,17 @@ const App: React.FC = () => {
       </header>
       <div className="App-body">
         <div>
-          <p>You have performed action one {count1} times.</p>
-          <button onClick={() => setCount1(count1 + 1)}>Action One</button>
+          <p>You have performed action one {state.count1} times.</p>
+          <button onClick={() => dispatch({ type: 'INCREMENT_ACTION_ONE' })}>Action One</button>
         </div>
-        {count1 >= 5 &&
+        {state.count1 >= 5 &&
           <div>
             <p>A new event has occured!</p>
-            <p>You have performed action two {count2} times.</p>
-            <button onClick={() => setCount2(count2 + 1)}>Action Two</button>
+            <p>You have performed action two {state.count2} times.</p>
+            <button onClick={() => dispatch({ type: 'INCREMENT_ACTION_TWO' })}>Action Two</button>
           </div>
         }
-        {count2 >= 5 &&
+        {state.count2 >= 5 &&
           <div>
             <p>That's all for now folks!</p>
           </div>
