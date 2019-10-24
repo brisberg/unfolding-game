@@ -1,6 +1,8 @@
 # unfolding-game
 Browser game in which the UI and game features unfold through play.
 
+[Play now!](http://brisberg.github.io/unfolding-game)
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
