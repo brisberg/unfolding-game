@@ -50,6 +50,11 @@ const App: React.FC = () => {
             <button onClick={() => setCount2(count2 + 1)}>Action Two</button>
           </div>
         }
+        {count2 >= 5 &&
+          <div>
+            <p>That's all for now folks!</p>
+          </div>
+        }
       </div>
       <div className="App-footer">
         <button onClick={resetData}>reset</button>
