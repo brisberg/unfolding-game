@@ -32,6 +32,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run deploy`
+
+Builds the app for production (using `npm run build` above), and pushes the bundle to the `gh-pages` branch on this repo.
+
+The updated app will be visble at `http://brisberg.github.io/unfolding-game`.
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
