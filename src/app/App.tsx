@@ -4,8 +4,8 @@ import './App.css';
 
 const loadSaveData = (): number[] => {
   return [
-    JSON.parse(localStorage.getItem('count1') || '') || 0,
-    JSON.parse(localStorage.getItem('count2') || '') || 0,
+    parseInt(localStorage.getItem('count1') || '') || 0,
+    parseInt(localStorage.getItem('count2') || '') || 0,
   ]
 }
 
