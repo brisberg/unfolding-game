@@ -2,14 +2,26 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const loadSaveData = (): number[] => {
+  return [
+    JSON.parse(localStorage.getItem('count1') || '') || 0,
+    JSON.parse(localStorage.getItem('count2') || '') || 0,
+  ]
+}
+
 const App: React.FC = () => {
-  const [count1, setCount1] = useState(
-    parseInt(localStorage.getItem('count1') || '0') || 0);
-  const [count2, setCount2] = useState(0);
+  const initialState = loadSaveData();
+
+  const [count1, setCount1] = useState(initialState[0]);
+  const [count2, setCount2] = useState(initialState[1]);
 
   useEffect(() => {
-    localStorage.setItem('count1', "" + count1)
+    localStorage.setItem('count1', String(count1))
   }, [count1]);
+
+  useEffect(() => {
+    localStorage.setItem('count2', String(count2))
+  }, [count2]);
 
   return (
     <div className="App">
