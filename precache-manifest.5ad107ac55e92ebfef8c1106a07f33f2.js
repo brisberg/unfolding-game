@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "002303c8fce4155a3a8ed0573c855dcd",
+    "revision": "f1bd9fd0fa5ec63cff5da22df3d8f5c5",
     "url": "/unfolding-game/index.html"
   },
   {
-    "revision": "b351f059086d0996b0e1",
-    "url": "/unfolding-game/static/css/main.dfca195d.chunk.css"
+    "revision": "001cf0904cdffd67bcca",
+    "url": "/unfolding-game/static/css/main.328efa21.chunk.css"
   },
   {
-    "revision": "574a5bba1c1d0c6811be",
-    "url": "/unfolding-game/static/js/2.ec222f52.chunk.js"
+    "revision": "e9225b4b993e37c183e1",
+    "url": "/unfolding-game/static/js/2.72bb7b86.chunk.js"
   },
   {
-    "revision": "b351f059086d0996b0e1",
-    "url": "/unfolding-game/static/js/main.a403f88d.chunk.js"
+    "revision": "001cf0904cdffd67bcca",
+    "url": "/unfolding-game/static/js/main.7d19e3cc.chunk.js"
   },
   {
     "revision": "43e981bdb307618a9d3a",

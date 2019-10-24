@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/unfolding-game/static/css/main.dfca195d.chunk.css",
-    "main.js": "/unfolding-game/static/js/main.a403f88d.chunk.js",
-    "main.js.map": "/unfolding-game/static/js/main.a403f88d.chunk.js.map",
+    "main.css": "/unfolding-game/static/css/main.328efa21.chunk.css",
+    "main.js": "/unfolding-game/static/js/main.7d19e3cc.chunk.js",
+    "main.js.map": "/unfolding-game/static/js/main.7d19e3cc.chunk.js.map",
     "runtime-main.js": "/unfolding-game/static/js/runtime-main.d216cd8c.js",
     "runtime-main.js.map": "/unfolding-game/static/js/runtime-main.d216cd8c.js.map",
-    "static/js/2.ec222f52.chunk.js": "/unfolding-game/static/js/2.ec222f52.chunk.js",
-    "static/js/2.ec222f52.chunk.js.map": "/unfolding-game/static/js/2.ec222f52.chunk.js.map",
+    "static/js/2.72bb7b86.chunk.js": "/unfolding-game/static/js/2.72bb7b86.chunk.js",
+    "static/js/2.72bb7b86.chunk.js.map": "/unfolding-game/static/js/2.72bb7b86.chunk.js.map",
     "index.html": "/unfolding-game/index.html",
-    "precache-manifest.a27242f244bafbe73dacc7d5e0046695.js": "/unfolding-game/precache-manifest.a27242f244bafbe73dacc7d5e0046695.js",
+    "precache-manifest.5ad107ac55e92ebfef8c1106a07f33f2.js": "/unfolding-game/precache-manifest.5ad107ac55e92ebfef8c1106a07f33f2.js",
     "service-worker.js": "/unfolding-game/service-worker.js",
-    "static/css/main.dfca195d.chunk.css.map": "/unfolding-game/static/css/main.dfca195d.chunk.css.map",
+    "static/css/main.328efa21.chunk.css.map": "/unfolding-game/static/css/main.328efa21.chunk.css.map",
     "static/media/logo.svg": "/unfolding-game/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d216cd8c.js",
-    "static/js/2.ec222f52.chunk.js",
-    "static/css/main.dfca195d.chunk.css",
-    "static/js/main.a403f88d.chunk.js"
+    "static/js/2.72bb7b86.chunk.js",
+    "static/css/main.328efa21.chunk.css",
+    "static/js/main.7d19e3cc.chunk.js"
   ]
 }
