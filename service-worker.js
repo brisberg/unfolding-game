@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/unfolding-game/precache-manifest.b783d02ec2aed885abaf8aa3ba381cf8.js"
+  "/unfolding-game/precache-manifest.d95fd8f2694f73559c551d435cf6deea.js"
 );
 
 self.addEventListener('message', (event) => {
