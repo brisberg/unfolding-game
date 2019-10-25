@@ -1,39 +1,8 @@
 import React, { useEffect, useReducer } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-interface Action {
-  type: string;
-}
-
-interface AppState {
-  count1: number;
-  count2: number;
-}
-
-const initialState: AppState = {
-  count1: 0,
-  count2: 0,
-}
-
-function reducer(state = initialState, action: Action) {
-  switch (action.type) {
-    case 'INCREMENT_ACTION_ONE':
-      return {
-        ...state,
-        count1: state.count1 + 1,
-      }
-    case 'INCREMENT_ACTION_TWO':
-      return {
-        ...state,
-        count2: state.count2 + 1,
-      }
-    case 'RESET':
-      return { ...initialState }
-    default:
-      return state;
-  }
-}
+import { AppActions } from '../state/actions';
+import { reducer, initialState } from '../state/reducer';
 
 const App: React.FC = () => {
   const loadedData = localStorage.getItem('gameState');
@@ -46,7 +15,7 @@ const App: React.FC = () => {
 
   const resetData = () => {
     localStorage.clear();
-    dispatch({ type: 'RESET' });
+    dispatch(AppActions.reset());
   }
 
   return (
@@ -60,13 +29,13 @@ const App: React.FC = () => {
       <div className="App-body">
         <div>
           <p>You have performed action one {state.count1} times.</p>
-          <button onClick={() => dispatch({ type: 'INCREMENT_ACTION_ONE' })}>Action One</button>
+          <button onClick={() => dispatch(AppActions.increaseCount1())}>Action One</button>
         </div>
         {state.count1 >= 5 &&
           <div>
             <p>A new event has occured!</p>
             <p>You have performed action two {state.count2} times.</p>
-            <button onClick={() => dispatch({ type: 'INCREMENT_ACTION_TWO' })}>Action Two</button>
+            <button onClick={() => dispatch(AppActions.increaseCount2())}>Action Two</button>
           </div>
         }
         {state.count2 >= 5 &&
